@@ -1,0 +1,6 @@
+<div class="header" (click)="toggle()">
+{{title}}
+</div>
+<div class="content" [ngClass]="{show: show}">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,37 @@
+
+
+<alert #alert></alert>
+<alert type="danger"></alert>
+<alert type="info"></alert>
+
+<accordion>
+  <panel title="zama">
+    Content 1
+  </panel>
+  <panel title="rakesh">
+    Content 2
+  </panel>
+  <panel title="mo">
+    Content 3
+  </panel>
+</accordion>
+
+<br>
+
+<accordion>
+  <panel title="zama">
+    Content 1
+  </panel>
+  <panel title="rakesh" *ngIf="false">
+    Content 2
+  </panel>
+  <panel title="mo">
+    Content 3
+  </panel>
+</accordion>
+<br>
+<accordion>
+  <panel *ngFor="let accordion of accordions" [title]="accordion.title">
+    <div [innerHTML]="accordion.content"></div>
+  </panel>
+</accordion>
